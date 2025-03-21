@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narine Chernykh House Cleaning Services - Aurora, CO</title>
+    <meta name="description" content="Professional house cleaning services in Aurora, Colorado. Offering standard, deep cleaning, and move-in/move-out services with affordable pricing.">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #5cb85c;
+            --accent-color: #41c7c7;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .col {
+            padding: 0 15px;
+            flex: 1;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background-color: #3476c5;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #4cae4c;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(65, 199, 199, 0.8)), url('/api/placeholder/1200/600') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Services */
+        .services {
+            background-color: var(--light-color);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-card-content {
+            padding: 25px;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .service-card p {
+            margin-bottom: 15px;
+            color: #6c757d;
+        }
+        
+        .service-price {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            margin-right: 50px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .credential {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .credential i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light-color);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .testimonial-author-name {
+            font-weight: 700;
+        }
+        
+        .testimonial-author-location {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        /* Special Offers */
+        .offers {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            color: white;
+        }
+        
+        .offers .section-title h2,
+        .offers .section-title p {
+            color: white;
+        }
+        
+        .offer-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .offer-card h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .offer-card p {
+            margin-bottom: 20px;
+        }
+        
+        /* Contact & Booking */
+        .contact-info {
+            margin-bottom: 50px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .booking-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .form-check input {
+            margin-right: 10px;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            background-color: var(--light-color);
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:after {
+            content: '+';
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+        
+        .faq-answer {
+            padding: 15px 20px;
+            display: none;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .faq-item.active .faq-question:after {
+            content: '-';
+            color: white;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* Call-to-action */
+        .cta {
+            background: linear-gradient(rgba(74, 144, 226, 0.9), rgba(65, 199, 199, 0.9)), url('/api/placeholder/1200/600') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-right: 0;
+                margin-bottom: 30px;
+                max-width: 500px;
+            }
+            
+            .col {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                background-color: white;
+                width: 100%;
+                height: calc(100vh - 70px);
+                flex-direction: column;
+                transition: left 0.3s;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 15px;
+                border-bottom: 1px solid #f1f1f1;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Service Icons */
+        .service-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Narine<span>Clean</span></a>
+                <div class="mobile-toggle">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#offers">Offers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="tel:+14062084550" class="btn">Call Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Professional House Cleaning in Aurora, CO</h1>
+            <p>Experience the exceptional cleaning service that transforms your home into a fresh, spotless sanctuary you'll love coming back to.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn">Book Now</a>
+                <a href="#services" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Cleaning Services</h2>
+                <p>We offer a variety of professional cleaning services to meet all your needs with transparent pricing and exceptional quality.</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="service-card">
+                        <div class="service-icon">🧹</div>
+                        <div class="service-card-content">
+                            <h3>Standard Cleaning</h3>
+                            <p>Our standard cleaning service includes dusting, vacuuming, mopping, bathroom sanitizing, kitchen cleaning, and making beds.</p>
+                            <div class="service-price">From $120</div>
+                            <a href="#contact" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="service-card">
+                        <div class="service-icon">✨</div>
+                        <div class="service-card-content">
+                            <h3>Deep Cleaning</h3>
+                            <p>Our comprehensive deep cleaning includes everything in the standard package plus baseboards, inside appliances, cabinet fronts, and more.</p>
+                            <div class="service-price">From $180</div>
+                            <a href="#contact" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <div class="service-card-content">
+                            <h3>Move-In/Move-Out</h3>
+                            <p>Get your new home pristine before moving in or leave your old place spotless with our detailed move-in/move-out cleaning service.</p>
+                            <div class="service-price">From $220</div>
+                            <a href="#contact" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="service-card">
+                        <div class="service-icon">🔄</div>
+                        <div class="service-card-content">
+                            <h3>Recurring Service</h3>
+                            <p>Save time and money with our weekly, bi-weekly, or monthly recurring cleaning services. Enjoy consistent cleanliness at a discounted rate.</p>
+                            <div class="service-price">From $100</div>
+                            <a href="#contact" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="service-card">
+                        <div class="service-icon">🪟</div>
+                        <div class="service-card-content">
+                            <h3>Specialty Services</h3>
+                            <p>We offer specialized services including carpet cleaning, window washing, and furniture cleaning as add-ons to any package.</p>
+                            <div class="service-price">From $60</div>
+                            <a href="#contact" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="service-card">
+                        <div class="service-icon">🌱</div>
+                        <div class="service-card-content">
+                            <h3>Eco-Friendly Cleaning</h3>
+                            <p>Environmentally conscious cleaning using non-toxic, all-natural products that are safe for your family, pets, and the planet.</p>
+                            <div class="service-price">From $135</div>
+                            <a href="#contact" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/api/placeholder/600/600" alt="Narine Chernykh, Professional House Cleaner">
+                </div>
+                <div class="about-text">
+                    <h2>About Narine Chernykh</h2>
+                    <p>With over 10 years of experience in professional house cleaning, I founded NarineClean with a simple mission: to provide Aurora families with the highest quality cleaning services that exceed expectations.</p>
+                    <p>What sets my service apart is personal attention to detail, reliability, and building lasting relationships with my clients. I understand that inviting someone into your home requires trust, which is why I treat every home with the utmost respect and care.</p>
+                    <div class="credential">
+                        <i>✓</i>
+                        <div>Fully Insured and Bonded</div>
+                    </div>
+                    <div class="credential">
+                        <i>✓</i>
+                        <div>Background Checked Staff</div>
+                    </div>
+                    <div class="credential">
+                        <i>✓</i>
+                        <div>Eco-Friendly Cleaning Products</div>
+                    </div>
+                    <div class="credential">
+                        <i>✓</i>
+                        <div>100% Satisfaction Guarantee</div>
+                    </div>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied clients throughout Aurora.</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "Narine has been cleaning our home for over a year now. She is reliable, thorough, and pays attention to all the little details. We love coming home after she's been here - everything is spotless!"
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/100/100" alt="Jennifer M.">
+                            <div>
+                                <div class="testimonial-author-name">Jennifer M.</div>
+                                <div class="testimonial-author-location">Southlands, Aurora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "I hired Narine for a move-out cleaning, and my landlord was amazed! I got my full deposit back thanks to her attention to detail. Highly recommend her services!"
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/100/100" alt="David K.">
+                            <div>
+                                <div class="testimonial-author-name">David K.</div>
+                                <div class="testimonial-author-location">Heather Gardens, Aurora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As a busy healthcare professional, I don't have time to deep clean my home. Narine's bi-weekly service is a lifesaver! She's trustworthy, professional, and my house has never looked better."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="/api/placeholder/100/100" alt="Sarah T.">
+                            <div>
+                                <div class="testimonial-author-name">Sarah T.</div>
+                                <div class="testimonial-author-location">Anschutz Medical Campus Area</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Special Offers & Discounts</h2>
+                <p>Take advantage of these exclusive deals to save on your next cleaning service.</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="offer-card">
+                        <h3>New Client Special</h3>
+                        <p>Receive 15% off your first cleaning service when you mention this offer.</p>
+                        <a href="#contact" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="offer-card">
+                        <h3>Referral Program</h3>
+                        <p>Refer a friend and receive a $25 credit toward your next cleaning service.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="offer-card">
+                        <h3>Recurring Service Discount</h3>
+                        <p>Save 10% with weekly service or 5% with bi-weekly cleaning plans.</p>
+                        <a href="#contact" class="btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="offer-card">
+                        <h3>Community Heroes Discount</h3>
+                        <p>10% off for teachers, first responders, healthcare workers, and military personnel.</p>
+                        <a href="#contact" class="btn">Claim Offer</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="offer-card">
+                        <h3>Bundle Package</h3>
+                        <p>Add specialty services like carpet cleaning or window washing at discounted rates.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="offer-card">
+                        <h3>Loyalty Program</h3>
+                        <p>Every 10th cleaning is 50% off for our regular customers.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact and Booking Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Cleaning Service</h2>
+                <p>Schedule your cleaning appointment today or contact us with any questions.</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i>📱</i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <a href="tel:+14062084550">+1 (406) 208-4550</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>📧</i>
+                            <div>
+                                <strong>Email:</strong>
+                                <a href="mailto:narine@narineclean.com">narine@narineclean.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>📍</i>
+                            <div>
+                                <strong>Serving:</strong>
+                                All Aurora, CO and surrounding areas
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>⏰</i>
+                            <div>
+                                <strong>Hours:</strong>
+                                Monday-Saturday: 8am-6pm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="booking-form">
+                        <h3>Booking Request Form</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address *</label>
+                                <input type="text" id="address" class="form-control" required>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="service">Service Type *</label>
+                                        <select id="service" class="form-control" required>
+                                            <option value="">Select Service</option>
+                                            <option value="standard">Standard Cleaning</option>
+                                            <option value="deep">Deep Cleaning</option>
+                                            <option value="move">Move-In/Move-Out</option>
+                                            <option value="recurring">Recurring Service</option>
+                                            <option
